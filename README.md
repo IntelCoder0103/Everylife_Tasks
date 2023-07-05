@@ -1,3 +1,17 @@
+## Getting Started
+### Install
+    yarn
+### Start local server
+    yarn dev --host
+
+### Testing
+    yarn test
+
+## E2E Testing
+    yarn cypress:open
+
+    yarn cypress:run
+
 ## Technical task
 Create a React SPA to fetch and display the tasks using the following API: `https://adam-deleteme.s3.amazonaws.com/tasks.json`
 
