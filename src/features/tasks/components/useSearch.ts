@@ -2,6 +2,13 @@ import { useDebounce } from "@/app/hooks";
 import { useEffect, useState } from "react";
 
 type SearchFunction = (search: string) => void;
+/**
+ * * The hook which returns search input props based on value and triger function
+ * 
+ * @param initialValue initial value of the search input
+ * @param searchFn the function that should be triggered when the user press enter
+ * @returns debounced search string and input props
+ */
 export default function useSearch(initialValue: string, searchFn: SearchFunction) {
   const [search, setSearch] = useState(initialValue);
   
