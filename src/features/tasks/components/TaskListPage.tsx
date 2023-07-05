@@ -6,9 +6,7 @@ import TaskListView from "./TaskListView";
 import Switch from "@/app/components/Switch";
 import useTasksSearch from "./useTasksSearch";
 
-export interface ITaskListPageProps {}
-
-export default function TaskListPage(props: ITaskListPageProps) {
+export default function TaskListPage() {
   
   const navigate = useNavigate();
   const searchFn = (search: string) => {
@@ -29,7 +27,12 @@ export default function TaskListPage(props: ITaskListPageProps) {
   return (
     <div className="task-list">
       <div className="flex gap-4 mb-4">
-        <input className="task-list__search form-control" {...inputProps} />
+        <input
+          className="task-list__search form-control"
+          {...inputProps}
+          placeholder="Search"
+          autoFocus
+        />
         <Switch
           enabled={groupEnabled}
           onChange={setGroupEnabled}
@@ -39,7 +42,7 @@ export default function TaskListPage(props: ITaskListPageProps) {
       {groupEnabled ? (
         <TaskListGroupView tasks={tasks} />
       ) : (
-        <TaskListView tasks={tasks} />
+        <TaskListView tasks={tasks}/>
       )}
     </div>
   );

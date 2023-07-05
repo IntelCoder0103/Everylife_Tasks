@@ -8,13 +8,13 @@ export interface ITaskListViewProps {
 export default function TaskListView(props: ITaskListViewProps) {
   const { tasks } = props;
   return (
-    <>
+    <div  data-testid="task-list-view" className='task-list-view'>
       {
         tasks.length === 0 && <div className='text-gray-400 my-8'>No Items</div>
       }
       {tasks.map((task, index) => (
         <TaskItem task={task} key={task.id} />
       ))}
-    </>
+    </div>
   );
 }

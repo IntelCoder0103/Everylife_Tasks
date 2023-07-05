@@ -14,7 +14,7 @@ export default function useSearch(initialValue: string, searchFn: SearchFunction
   };
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key == 'Enter' || e.which == 37) {
+    if (e.key == 'Enter') {
       searchFn(search);
     }
   };

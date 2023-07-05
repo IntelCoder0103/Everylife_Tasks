@@ -4,10 +4,7 @@ import { useNavigate, useParams } from 'react-router';
 import { getById as getTaskById, update as updateTask, remove as deleteTask } from '../tasksSlice';
 import TaskForm from './TaskForm';
 
-export interface ITaskDetailPageProps {
-}
-
-export default function TaskDetailPage(props: ITaskDetailPageProps) {
+export default function TaskDetailPage() {
   const { id } = useParams();
   const dispatch = useAppDispatch();
   const {currentTask } = useAppSelector(state => state.tasks);

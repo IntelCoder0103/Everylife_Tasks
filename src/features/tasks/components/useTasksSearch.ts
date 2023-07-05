@@ -1,6 +1,5 @@
 import { useMemo } from "react";
-import { useAppSelector, useAppDispatch } from "@/app/hooks";
-import { useLocation } from "react-router";
+import { useAppSelector } from "@/app/hooks";
 
 export default function useTasksSearch(searchStr: string) {
   const { tasks } = useAppSelector((state) => state.tasks);

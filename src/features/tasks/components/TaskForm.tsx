@@ -24,7 +24,7 @@ export default function TaskForm(props: ITaskFormProps) {
     setValue("description", description);
   }, [name, description]);
 
-  const onSubmit = handleSubmit((value) => {
+  const onSubmit = handleSubmit((value: TaskFormType) => {
     onSave({ ...task, ...value });
   });
   const handleDelete = () => {
@@ -58,7 +58,7 @@ export default function TaskForm(props: ITaskFormProps) {
       <div className="flex gap-3 items-center w-full">
         <button type="button" className="mx-4 text-red-500" onClick={handleDelete}>Delete</button>
         <div className="grow"></div>
-        <button className="bg-teal-600 px-6 py-2 rounded-full">Save</button>
+        <button type="submit" className="bg-teal-600 px-6 py-2 rounded-full">Save</button>
         <button
           className="border-2 border-teal-600 px-6 py-2 rounded-full"
           onClick={handleBack}
