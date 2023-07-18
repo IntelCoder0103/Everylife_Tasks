@@ -12,6 +12,9 @@
 
     yarn cypress:run
 
+### Screenshot
+<img src="./public/capture.png" />
+
 ## Technical task
 Create a React SPA to fetch and display the tasks using the following API: `https://adam-deleteme.s3.amazonaws.com/tasks.json`
 
